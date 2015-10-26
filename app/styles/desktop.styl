@@ -1,0 +1,44 @@
+@import '_variables'
+
+#app, #register, #login
+  margin-left: auto
+  margin-right: auto
+
+#register, #login
+  max-width: 400px
+
+#app
+  max-width: 1000px
+
+#trips
+  input, textarea, .datepicker__input-container
+    max-width: 300px
+    display: block
+
+.alert
+  font-size: ($margin * 1.5)
+
+.trip .buttons .col
+  width: 25%
+
+// Date picker
+.datepicker__input-container .close-icon
+  display: inline
+
+// Animations
+
+a, a:link
+  transition: color 200ms
+  &:hover
+    color: $blueHighlight
+
+input, textarea
+  transition: border-color 200ms
+
+input[type=submit], .button, button
+  transition: background-color 300ms
+  &:hover
+    background-color: $blueHighlight
+    color: white
+  &.loading:hover
+    background-color: grey

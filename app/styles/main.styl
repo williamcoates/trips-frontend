@@ -1,0 +1,101 @@
+@import '_variables'
+
+body
+  *
+    font-family: $font
+    box-sizing: border-box
+  padding: $margin
+
+a, a:link
+  color: $blue
+
+h1
+  position: relative
+  margin-top: 0
+  font-size: ($margin * 1.5)
+
+h2
+  margin: ($margin/2) 0
+
+.alert
+  position: fixed
+  bottom: 0
+  left: 0
+  width: 100%
+  padding: ($margin * 2)
+  font-size: $margin
+  color: white
+  opacity: 0.9
+  text-align: center
+  z-index: 1
+  &.error
+    background-color: red
+  &.success
+    background-color: green
+
+input, textarea, input.datepicker__input
+  width: 100%
+  border: 2px solid $blue
+  font-size: $margin
+  padding: ($margin/4)
+  line-height: initial
+  border-radius: 3px
+  margin-bottom: $margin
+  transition: border-color 200ms
+  &:focus
+    outline: 0
+    border-color: $blueHighlight
+
+input[type=text],input[type=email], input[type=password], input[type=submit]
+  -webkit-appearance: none
+
+input[type=submit], .button, button
+  cursor: pointer
+  border: 2px
+  background-color: $blue
+  border-radius: 15px
+  color: white
+  padding: ($margin/2)
+  font-size: $margin
+  text-decoration: none
+  &.loading
+    background-color: grey
+
+#logout.button
+  position: absolute
+  height: 100%
+  top: 0px
+  right: 0px
+  line-height: 100%
+
+#trips .travel-planner
+  display: block
+  margin-bottom: $margin
+
+.trip
+  border-width: 1px 0px
+  border-style: dashed
+  border-color: $blue
+  margin-bottom: $margin
+  input:first-child
+    margin-top: ($margin/2)
+  input, textarea
+    margin-bottom: ($margin/2)
+  .destination .days
+    font-size: 16px
+  .comment
+    font-style: italic
+    margin: ($margin/2) 0
+  .buttons
+    margin-bottom: ($margin/2)
+    overflow: auto
+    button
+      width: 100%
+    .col
+      width: 50%
+      float: left
+      padding: 0px ($margin/2)
+
+#travel-planner
+  button, .button
+    margin-right: $margin

@@ -1,0 +1,21 @@
+{
+  "name": "your-app",
+  "version": "0.0.1",
+  "main": "public/app.js",
+  "dependencies": {
+    "react": "~0.13.3",
+    "react-router": "~0.13.3",
+    "jquery": "~2.1.4",
+    "eventemitter2": "~0.4.14",
+    "moment": "~2.10.6",
+    "node-uuid": "~1.4.3",
+    "react-date-picker": "0.13.0"
+  },
+  "overrides": {
+    "react-router": {
+      "dependencies": {
+        "react": "*"
+      }
+    }
+  }
+}
