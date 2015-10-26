@@ -1,8 +1,10 @@
 var Link = ReactRouter.Link
+var config = require('js/config')
 import LoadingSubmit from './loading_submit'
 import formHelper from '../utils/form_helper'
 import sessionStore from '../stores/session_store'
 import actionHandler from '../action_handler'
+import routeHelper from '../utils/route_helper'
 
 export default class Login extends React.Component {
 
@@ -36,7 +38,7 @@ export default class Login extends React.Component {
           <input type="password" ref="password" placeholder="Password" pattern=".{8,}" title="Minimum length 8" required/>
           <LoadingSubmit loading={this.state.loading} title="Login"/>
         </form>
-        <Link to="/register">Not yet registered?</Link>
+        <Link to={routeHelper('register')}>Not yet registered?</Link>
       </div>
     )
   }

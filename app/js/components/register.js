@@ -3,6 +3,7 @@ import LoadingSubmit from './loading_submit'
 import errorHandler from '../utils/error_handler'
 import actionHandler from '../action_handler'
 import backend from '../backend'
+import routeHelper from '../utils/route_helper'
 
 export default class Register extends React.Component {
   constructor(props) {
@@ -39,7 +40,7 @@ export default class Register extends React.Component {
           <input type="password" ref="password_confirmation" placeholder="Confirm Password" pattern=".{8,}" title="Minimum length 8" required/>
           <LoadingSubmit loading={this.state.loading} title="Register"/>
         </form>
-        <Link to="/">Already registered?</Link>
+        <Link to={routeHelper('')}>Already registered?</Link>
       </div>
     )
   }

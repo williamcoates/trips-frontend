@@ -6,6 +6,7 @@ import tripStore from '../stores/trip_store'
 import sessionStore from '../stores/session_store'
 import tripProperties from '../constants/trip_properties'
 import onChangeSetup from '../utils/on_change_setup'
+import routeHelper from '../utils/route_helper'
 
 export default class Trips extends React.Component {
 
@@ -79,7 +80,7 @@ export default class Trips extends React.Component {
         <h1>My Trips
           <span id="logout" className="button" onClick={this.signOut}>Log out</span>
         </h1>
-        <Link className="travel-planner" to="/travel-planner">See next months trips...</Link>
+        <Link className="travel-planner" to={routeHelper('travel-planner')}>See next months trips...</Link>
         <div>
           <input type="text" placeholder="Filter by keyword" onChange={this.filterByKeyword.bind(this, 'string')} />
           <label>Filter trips starting on or after:</label>

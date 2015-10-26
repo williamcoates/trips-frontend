@@ -2,6 +2,7 @@ import TripList from './trip_list'
 var Link = ReactRouter.Link
 import tripStore from '../stores/trip_store'
 import actionHandler from '../action_handler'
+import routeHelper from '../utils/route_helper'
 
 export default class TravelPlans extends React.Component {
 
@@ -23,7 +24,7 @@ export default class TravelPlans extends React.Component {
         <h1>Next months' trips</h1>
         <TripList trips={this.state.trips} hideActions={true}/>
         <button onClick={window.print}>Print</button>
-        <Link className="button" to="/">Back</Link>
+        <Link className="button" to={routeHelper('')}>Back</Link>
       </div>
     )
   }
