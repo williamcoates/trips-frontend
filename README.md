@@ -2,7 +2,9 @@
 
 Simple travel planner HTML5 web application front-end built with Brunch + ES6 + React + React Router.
 
-Demo at https://williamcoates.github.io/trips-frontend/
+Demo at https://williamcoates.github.io/trips-frontend/.
+
+Rails powered simple backend over at https://github.com/williamcoates/trips-backend.
 
 Tested on the following:
 
