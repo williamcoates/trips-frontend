@@ -32,9 +32,15 @@ Running the front-end dev server:
 
 ## Production build
 
-This will build with backend set to heroku instance, and using production setup
+This will build with backend set to heroku instance, and using production setup, for the github pages deployment
 
-    BACKEND=https://afternoon-harbor-1379.herokuapp.com brunch build --production
+     ROOT_PATH=/trips-frontend/ BACKEND=https://afternoon-harbor-1379.herokuapp.com brunch build --production
+
+## Pushing to github pages
+
+Don't love this approach as it means polluting our commit history with build files. We always need push to master before we can push the subtree.
+
+    git subtree push --prefix=public git@github.com:williamcoates/trips-frontend.git gh-pages
 
 
 ## Low priority fixes
